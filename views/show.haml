@@ -1,5 +1,22 @@
-%a{ href: "/" } Home
-%hr
-- @iframes.each do |iframe|
-  = iframe
-  %br
+%html
+  %head
+    :css
+      body {
+        font-family: Helvetica;
+        line-height: 30px;
+        margin: 20px;
+      }
+
+      a {
+        color: #333;
+      }
+
+      a:visited {
+        color: #999;
+      }
+  %body
+    %a{ href: "/" } Home
+    %hr
+    - @iframes.each do |iframe|
+      = iframe
+      %br
