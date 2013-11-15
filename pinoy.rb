@@ -9,6 +9,8 @@ require 'curb'
 BLACKLIST = ["m2pub.com", "180upload.com", "uploadpluz.com", "allmyvideos.net", "nowvideo.eu"]
 
 get "/" do
+  return "" unless params[:secret]
+
   http = Curl.get("http://www.pinoy-ako.info/")
   @body = http.body_str
 
@@ -32,6 +34,8 @@ get "/" do
 end
 
 get "/show" do
+  return "" unless params[:secret]
+
   http = Curl.get("http://www.pinoy-ako.info/#{params[:show]}")
   @body = http.body_str
 
