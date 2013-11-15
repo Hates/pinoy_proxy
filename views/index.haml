@@ -16,5 +16,5 @@
       }
   %body
     - @shows.each do |show|
-      %a{ href: "/show?show=#{show[:href]}" } #{show[:name]}
+      %a{ href: "/show?secret=1&show=#{show[:href]}" } #{show[:name]}
       %br
