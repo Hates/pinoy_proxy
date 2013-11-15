@@ -6,7 +6,7 @@ require 'haml'
 require 'nokogiri'
 require 'curb'
 
-BLACKLIST = ["m2pub.com", "180upload.com", "uploadpluz.com"]
+BLACKLIST = ["m2pub.com", "180upload.com", "uploadpluz.com", "allmyvideos.net", "nowvideo.eu"]
 
 get "/" do
   http = Curl.get("http://www.pinoy-ako.info/")
